@@ -1,4 +1,4 @@
-import { OrdersServices } from "../services/orders.services.js";
+import { OrdersServices } from "../services/orders.service.js";
 
 export class OrdersController{
     static getOrder = async (req,res) => {
