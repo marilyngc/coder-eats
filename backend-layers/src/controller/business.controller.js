@@ -52,7 +52,7 @@ export class BusinessController{
             const {orders} = req.body;
             const business = await BusinessServices.getOneBusiness(businessId);
             if (!business) {
-                res.json({status:error,message:"this business not exists"});
+              return  res.json({status:error,message:"this business not exists"});
             }
 
             business.orders = orders;

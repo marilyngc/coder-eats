@@ -6,10 +6,7 @@ const ordersCollection = "business";
 
 
 const ordersSchema = new mongoose.Schema({
-   numberOrder:{
-    type:Number,
-    require:true
-   },
+  
    business:{
     type:mongoose.Schema.Types.ObjectId,
     ref:"business"
@@ -22,6 +19,11 @@ const ordersSchema = new mongoose.Schema({
    priceTotal:{
     type:Number,
     require:true
+   },
+   status:{
+      type:String,
+      enum:["complet", "canceled","in process"],
+      default:"in process"
    }
 });
 

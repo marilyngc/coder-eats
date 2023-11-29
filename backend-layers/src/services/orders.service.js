@@ -1,15 +1,15 @@
-
+import { ordersDao } from "../dao/index.js";
 
 export class OrdersServices{
     static getOrder = () => {
-        return "getOrder"
+        return ordersDao.getOrder();
     };
 
-    static createOrder = () => {
-        return "createOrder"
+    static createOrder = (info) => {
+        return ordersDao.createOrder(info)
     };
 
-    static modifyStatusOrder =  () => {
-        return "modifyStatusOrder"
+    static modifyStatusOrder =  (id,info) => {
+        return ordersDao.smodifyStatusOrder(id,info)
     };
 }
